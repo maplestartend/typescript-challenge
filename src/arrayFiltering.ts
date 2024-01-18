@@ -9,5 +9,8 @@
  * @returns - 回傳只包含偶數的數字陣列
  */
 export function filterEvens(numbers: number[]): number[] {
-    // 請在此處寫下你的程式碼
+  const answer: number[] = numbers.filter((num) => {
+    return num % 2 == 0;
+  });
+  return answer;
 }
