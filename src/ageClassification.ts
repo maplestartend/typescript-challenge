@@ -11,5 +11,11 @@
  * @returns - 回傳年齡的分類結果
  */
 export function classifyAge(age: number): string {
-    // 請在此處寫下你的程式碼
+  return age >= 65
+    ? "Senior"
+    : age >= 18
+    ? "Adult"
+    : age >= 13
+    ? "Teenager"
+    : "Child";
 }
