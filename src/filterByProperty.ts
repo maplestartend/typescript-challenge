@@ -1,3 +1,5 @@
+import { ar } from "vitest/dist/reporters-5f784f42.js";
+
 /**
  * 任務：實作一個函式 `filterByProperty`，該函式應該過濾出陣列中的元素，其指定屬性的值等於給定值。
  *
@@ -10,12 +12,15 @@
  * @param value - 要過濾的屬性值
  * @returns - 回傳過濾後的陣列
  */
-export function filterByProperty(){
-    // 請在此處寫下你的程式碼
+export function filterByProperty<T, K extends keyof T>(
+  array: Array<T>,
+  property: K,
+  value: T[K]
+): Array<T> {
+  return array.filter((item) => item[property] === value);
 }
-
 
 // 寫法推薦
 // export function filterByProperty<T, K extends keyof T>(array: T[], property: K, value: T[K]): T[] {
-    
+
 // }
